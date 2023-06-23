@@ -10,11 +10,16 @@
     "test:run": "vitest run"
   },
   "devDependencies": {
+    "@types/acorn": "^6.0.0",
     "@vitest/ui": "latest",
     "vite": "latest",
     "vitest": "latest"
   },
   "stackblitz": {
     "startCommand": "npm run test:ui"
+  },
+  "dependencies": {
+    "acorn": "^8.9.0",
+    "acorn-loose": "^8.3.0"
   }
 }
