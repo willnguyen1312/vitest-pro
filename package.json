@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "acorn": "^8.10.0",
-    "acorn-loose": "^8.3.0"
+    "acorn-loose": "^8.3.0",
+    "picocolors": "^1.0.0"
   }
 }
