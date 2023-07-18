@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+import jwtDecode from "jwt-decode";
 import { expect, test } from "vitest";
 
 const secret = "shhhhh";
@@ -26,4 +27,10 @@ test("jwt token", () => {
   expect(() =>
     jwt.verify(fakeToken, secret)
   ).toThrowErrorMatchingInlineSnapshot('"invalid signature"');
+
+  expect(jwtDecode(token)).toMatchInlineSnapshot(`
+    {
+      "name": "Nam",
+    }
+  `);
 });
