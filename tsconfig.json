@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "types": ["node", "vitest/globals"],
+    "lib": ["ES2015", "DOM"],
+    "esModuleInterop": true,
+    "jsx": "react-jsx"
+  }
+}
