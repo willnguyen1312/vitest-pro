@@ -10,7 +10,7 @@ test("jwt token", () => {
   });
 
   expect(token).toMatchInlineSnapshot(
-    '"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTmFtIn0.nA_snfndfbvax3E7UiyJUdX8fq76zunD8jDx8Qb9YaA"'
+    '"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTmFtIn0.nA_snfndfbvax3E7UiyJUdX8fq76zunD8jDx8Qb9YaA"',
   );
 
   const valid = jwt.verify(token, secret);
@@ -25,7 +25,7 @@ test("jwt token", () => {
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVmkifQ.yxf75wwi2mMWlq31dSMCFCHW-QLBBUQh-4QKF3Zdt3M";
 
   expect(() =>
-    jwt.verify(fakeToken, secret)
+    jwt.verify(fakeToken, secret),
   ).toThrowErrorMatchingInlineSnapshot('"invalid signature"');
 
   expect(jwtDecode(token)).toMatchInlineSnapshot(`

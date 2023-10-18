@@ -51,7 +51,7 @@ const render = (options: Parameters<typeof createMemoryRouter>[1] = {}) => {
         ],
       },
     ],
-    options
+    options,
   );
 
   return rtlRender(<RouterProvider router={router} />);

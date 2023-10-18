@@ -20,7 +20,7 @@ describe("Polaris test", () => {
       [
         "node_modules/@shopify/polaris/build/ts/src/components/Divider/Divider.d.ts",
       ],
-      {}
+      {},
     );
 
     for (const sourceFile of program.getSourceFiles()) {
