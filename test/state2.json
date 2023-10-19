@@ -1,0 +1,27 @@
+{
+  "renderedComponents": [
+    {
+      "children": [],
+      "id": "BLwkwpGNl26fNMw7Swa_S",
+      "componentName": "AccountConnection",
+      "props": {
+        "title": "title",
+        "details": "details",
+        "termsOfService": "termsOfService",
+        "accountName": "accountName",
+        "avatarUrl": "avatarUrl",
+        "connected": true,
+        "ok": false,
+        "action": {
+          "id": "id",
+          "content": "content",
+          "accessibilityLabel": "accessibilityLabel",
+          "url": "url",
+          "external": false
+        },
+        "hel": [],
+        "yearh": [1, 2, 3]
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "renderedComponents": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "U9MhHaz5SWMnDQYptDZEx",
+          "componentName": "Button",
+          "props": {
+            "children": "Button",
+            "size": "medium",
+            "textAlign": "center",
+            "icon": "AddImageMajor",
+            "fullWidth": false,
+            "disclosure": false,
+            "dataPrimaryLink": false,
+            "tone": "success",
+            "variant": "primary",
+            "id": "",
+            "url": "",
+            "external": false,
+            "download": "",
+            "submit": false,
+            "disabled": false,
+            "loading": false,
+            "pressed": false
+          }
+        },
+        {
+          "children": [],
+          "id": "mo0Cp7YP0POSHZ4YLUUcy",
+          "componentName": "Button",
+          "props": {
+            "children": "Button",
+            "size": "medium",
+            "textAlign": "center",
+            "fullWidth": false,
+            "disclosure": false,
+            "dataPrimaryLink": false,
+            "tone": "critical",
+            "variant": "primary",
+            "id": "",
+            "url": "",
+            "external": false,
+            "download": "",
+            "submit": false,
+            "disabled": false,
+            "loading": false,
+            "pressed": false
+          }
+        }
+      ],
+      "id": "WbWKmqUqXH7PLd_2OWH-d",
+      "componentName": "ButtonGroup",
+      "props": {
+        "gap": "loose",
+        "fullWidth": true,
+        "connectedTop": false,
+        "noWrap": false
+      }
+    }
+  ]
+}

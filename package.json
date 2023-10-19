@@ -17,6 +17,7 @@
     "@types/react-dom": "^18.2.13",
     "@vitest/ui": "latest",
     "jsdom": "^22.1.0",
+    "prettier": "^3.0.3",
     "vite": "latest",
     "vitest": "latest"
   },
