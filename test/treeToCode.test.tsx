@@ -17,7 +17,7 @@ type RenderedComponent = {
 
 function traverse(
   node: RenderedComponent,
-  visit: (node: RenderedComponent) => void,
+  visit: (node: RenderedComponent) => void
 ) {
   visit(node);
   node.children.forEach((child) => traverse(child, visit));
