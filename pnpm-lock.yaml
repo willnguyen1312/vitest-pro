@@ -6,32 +6,32 @@ settings:
 
 dependencies:
   '@shopify/polaris':
-    specifier: ^12.0.0
-    version: 12.0.0(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^12.1.1
+    version: 12.1.1(react-dom@18.2.0)(react@18.2.0)
   '@shopify/polaris-icons':
     specifier: ^7.9.0
     version: 7.9.0
   '@shopify/polaris-tokens':
-    specifier: ^8.0.0
-    version: 8.0.0
+    specifier: ^8.1.0
+    version: 8.1.0
   '@testing-library/react':
-    specifier: ^14.0.0
-    version: 14.0.0(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^14.1.2
+    version: 14.1.2(react-dom@18.2.0)(react@18.2.0)
   '@testing-library/user-event':
     specifier: ^14.5.1
     version: 14.5.1(@testing-library/dom@9.3.1)
   acorn:
-    specifier: ^8.10.0
-    version: 8.10.0
+    specifier: ^8.11.2
+    version: 8.11.2
   acorn-loose:
-    specifier: ^8.3.0
-    version: 8.3.0
+    specifier: ^8.4.0
+    version: 8.4.0
   jsonwebtoken:
     specifier: ^9.0.2
     version: 9.0.2
   jwt-decode:
-    specifier: ^3.1.2
-    version: 3.1.2
+    specifier: ^4.0.0
+    version: 4.0.0
   picocolors:
     specifier: ^1.0.0
     version: 1.0.0
@@ -42,14 +42,14 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   react-router-dom:
-    specifier: ^6.17.0
-    version: 6.17.0(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^6.20.0
+    version: 6.20.0(react-dom@18.2.0)(react@18.2.0)
   subtitle:
     specifier: ^4.2.1
     version: 4.2.1
   typescript:
-    specifier: ^5.2.2
-    version: 5.2.2
+    specifier: ^5.3.2
+    version: 5.3.2
   vitest-dom:
     specifier: ^0.1.1
     version: 0.1.1(vitest@0.33.0)
@@ -59,17 +59,17 @@ devDependencies:
     specifier: ^6.0.0
     version: 6.0.0
   '@types/jsonwebtoken':
-    specifier: ^9.0.4
-    version: 9.0.4
+    specifier: ^9.0.5
+    version: 9.0.5
   '@types/jwt-decode':
     specifier: ^3.1.0
     version: 3.1.0
   '@types/react':
-    specifier: ^18.2.29
-    version: 18.2.29
+    specifier: ^18.2.38
+    version: 18.2.38
   '@types/react-dom':
-    specifier: ^18.2.13
-    version: 18.2.13
+    specifier: ^18.2.17
+    version: 18.2.17
   '@vitest/ui':
     specifier: latest
     version: 0.33.0(vitest@0.33.0)
@@ -77,8 +77,8 @@ devDependencies:
     specifier: ^22.1.0
     version: 22.1.0
   prettier:
-    specifier: ^3.0.3
-    version: 3.0.3
+    specifier: ^3.1.0
+    version: 3.1.0
   vite:
     specifier: latest
     version: 4.4.4(@types/node@20.3.1)
@@ -322,8 +322,8 @@ packages:
   /@polka/url@1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
 
-  /@remix-run/router@1.10.0:
-    resolution: {integrity: sha512-Lm+fYpMfZoEucJ7cMxgt4dYt8jLfbpwRCzAjm9UgSLOkmlqo9gupxt6YX3DY0Fk155NT9l17d/ydi+964uS9Lw==}
+  /@remix-run/router@1.13.0:
+    resolution: {integrity: sha512-5dMOnVnefRsl4uRnAdoWjtVTdh8e6aZqgM4puy9nmEADH72ck+uXwzpJLEKE9Q6F8ZljNewLgmTfkxUrBdv4WA==}
     engines: {node: '>=14.0.0'}
     dev: false
 
@@ -332,24 +332,24 @@ packages:
     engines: {node: ^16.17.0 || >=18.12.0}
     dev: false
 
-  /@shopify/polaris-tokens@8.0.0:
-    resolution: {integrity: sha512-msCbisjh5XWplcFrQIk3CF0ym6/MTgvCdjQh0PjN7avvq5M7ryBJ+1s4VBSe55pPDK03JEYybWGvvrlOtCtlWQ==}
+  /@shopify/polaris-tokens@8.1.0:
+    resolution: {integrity: sha512-qubEikjLuZp+lqZrlr9wBQug8fZbZlgKrfXbjISnszD4bTT1vmpsGohX00UYsWORQUqYyyS5106VwpLX3eZWLQ==}
     engines: {node: ^16.17.0 || >=18.12.0}
     dependencies:
       deepmerge: 4.3.1
     dev: false
 
-  /@shopify/polaris@12.0.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-g2V73EpbziaS9FF3uDQ0hXoNkxbe/2KPOWkgVZ7e3qr62J3GDYvKfHqY8SmljwEYGvoUjZ2erQEOTMP9M0teXQ==}
+  /@shopify/polaris@12.1.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-AiHsZx6wbAxDjKFXjE9J/QTbyMtyd0yQ7jTNcIu7a+HGgSClZDk4PemeiFVS2VAVFJ8rsrpwmMZ6RRFJWSpiVA==}
     engines: {node: ^16.17.0 || >=18.12.0}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
     dependencies:
       '@shopify/polaris-icons': 7.9.0
-      '@shopify/polaris-tokens': 8.0.0
-      '@types/react': 18.2.29
-      '@types/react-dom': 18.2.13
+      '@shopify/polaris-tokens': 8.1.0
+      '@types/react': 18.2.38
+      '@types/react-dom': 18.2.17
       '@types/react-transition-group': 4.4.8
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -374,8 +374,8 @@ packages:
       pretty-format: 27.5.1
     dev: false
 
-  /@testing-library/react@14.0.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-S04gSNJbYE30TlIMLTzv6QCTzt9AqIF5y6s6SzVFILNcNvbV/jU96GeiTPillGQo+Ny64M/5PV7klNYYgv5Dfg==}
+  /@testing-library/react@14.1.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-z4p7DVBTPjKM5qDZ0t5ZjzkpSNb+fZy1u6bzO7kk8oeGagpPCAtgh4cx1syrfp7a+QWkM021jGqjJaxJJnXAZg==}
     engines: {node: '>=14'}
     peerDependencies:
       react: ^18.0.0
@@ -383,7 +383,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.22.6
       '@testing-library/dom': 9.3.1
-      '@types/react-dom': 18.2.13
+      '@types/react-dom': 18.2.17
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
@@ -405,7 +405,7 @@ packages:
     resolution: {integrity: sha512-8tSIZoick397hAZIZkiq6R09qNgLjx0CBvmxix3gWyCi6UvXNFjN56xh4e1wTwyYlnTEy32tgo9cooxt6J4lhA==}
     deprecated: This is a stub types definition. acorn provides its own type definitions, so you do not need this installed.
     dependencies:
-      acorn: 8.10.0
+      acorn: 8.11.2
     dev: true
 
   /@types/aria-query@5.0.1:
@@ -420,8 +420,8 @@ packages:
   /@types/chai@4.3.5:
     resolution: {integrity: sha512-mEo1sAde+UCE6b2hxn332f1g1E8WfYRu6p5SvTKr2ZKC1f7gFJXk4h5PyGP9Dt6gCaG8y8XhwnXWC6Iy2cmBng==}
 
-  /@types/jsonwebtoken@9.0.4:
-    resolution: {integrity: sha512-8UYapdmR0QlxgvJmyE8lP7guxD0UGVMfknsdtCFZh4ovShdBl3iOI4zdvqBHrB/IS+xUj3PSx73Qkey1fhWz+g==}
+  /@types/jsonwebtoken@9.0.5:
+    resolution: {integrity: sha512-VRLSGzik+Unrup6BsouBeHsf4d1hOEgYWTm/7Nmw1sXoN1+tRly/Gy/po3yeahnP4jfnQWWAhQAqcNfH7ngOkA==}
     dependencies:
       '@types/node': 20.3.1
     dev: true
@@ -430,7 +430,7 @@ packages:
     resolution: {integrity: sha512-tthwik7TKkou3mVnBnvVuHnHElbjtdbM63pdBCbZTirCt3WAdM73Y79mOri7+ljsS99ZVwUFZHLMxJuJnv/z1w==}
     deprecated: This is a stub types definition. jwt-decode provides its own type definitions, so you do not need this installed.
     dependencies:
-      jwt-decode: 3.1.2
+      jwt-decode: 4.0.0
     dev: true
 
   /@types/multipipe@3.0.3:
@@ -445,19 +445,19 @@ packages:
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
 
-  /@types/react-dom@18.2.13:
-    resolution: {integrity: sha512-eJIUv7rPP+EC45uNYp/ThhSpE16k22VJUknt5OLoH9tbXoi8bMhwLf5xRuWMywamNbWzhrSmU7IBJfPup1+3fw==}
+  /@types/react-dom@18.2.17:
+    resolution: {integrity: sha512-rvrT/M7Df5eykWFxn6MYt5Pem/Dbyc1N8Y0S9Mrkw2WFCRiqUgw9P7ul2NpwsXCSM1DVdENzdG9J5SreqfAIWg==}
     dependencies:
-      '@types/react': 18.2.29
+      '@types/react': 18.2.38
 
   /@types/react-transition-group@4.4.8:
     resolution: {integrity: sha512-QmQ22q+Pb+HQSn04NL3HtrqHwYMf4h3QKArOy5F8U5nEVMaihBs3SR10WiOM1iwPz5jIo8x/u11al+iEGZZrvg==}
     dependencies:
-      '@types/react': 18.2.29
+      '@types/react': 18.2.38
     dev: false
 
-  /@types/react@18.2.29:
-    resolution: {integrity: sha512-Z+ZrIRocWtdD70j45izShRwDuiB4JZqDegqMFW/I8aG5DxxLKOzVNoq62UIO82v9bdgi+DO1jvsb9sTEZUSm+Q==}
+  /@types/react@18.2.38:
+    resolution: {integrity: sha512-cBBXHzuPtQK6wNthuVMV6IjHAFkdl/FOPFIlkd81/Cd1+IqkHu/A+w4g43kaQQoYHik/ruaQBDL72HyCy1vuMw==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
@@ -516,19 +516,19 @@ packages:
   /abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
 
-  /acorn-loose@8.3.0:
-    resolution: {integrity: sha512-75lAs9H19ldmW+fAbyqHdjgdCrz0pWGXKmnqFoh8PyVd1L2RIb4RzYrSjmopeqv3E1G3/Pimu6GgLlrGbrkF7w==}
+  /acorn-loose@8.4.0:
+    resolution: {integrity: sha512-M0EUka6rb+QC4l9Z3T0nJEzNOO7JcoJlYMrBlyBCiFSXRyxjLKayd4TbQs2FDRWQU1h9FR7QVNHt+PEaoNL5rQ==}
     engines: {node: '>=0.4.0'}
     dependencies:
-      acorn: 8.10.0
+      acorn: 8.11.2
     dev: false
 
   /acorn-walk@8.2.0:
     resolution: {integrity: sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==}
     engines: {node: '>=0.4.0'}
 
-  /acorn@8.10.0:
-    resolution: {integrity: sha512-F0SAmZ8iUtS//m8DmCTA0jlh6TDKkHQyK6xc6V4KDTyZKA9dnvX9/3sRTVQrWm79glUAZbnmmNcdYwUIHWVybw==}
+  /acorn@8.11.2:
+    resolution: {integrity: sha512-nc0Axzp/0FILLEVsm4fNwLCwMttvhEI263QtVPQcbpfZZ3ts0hLsZGOpE6czNlid7CJ9MlyH8reXkpsf3YUY4w==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -1233,8 +1233,9 @@ packages:
       safe-buffer: 5.2.1
     dev: false
 
-  /jwt-decode@3.1.2:
-    resolution: {integrity: sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==}
+  /jwt-decode@4.0.0:
+    resolution: {integrity: sha512-+KJGIyHgkGuIq3IEBNftfhW/LfWhXUIY6OmyVWjliu5KH1y0fw7VQ8YndE2O4qZdMSd9SqbnC8GOcZEy0Om7sA==}
+    engines: {node: '>=18'}
 
   /local-pkg@0.4.3:
     resolution: {integrity: sha512-SFppqq5p42fe2qcZQqqEOiVRXl+WCP1MdT6k7BDEW1j++sp5fIY+/fdRQitvKgB5BrBcmrs5m/L0v2FrU5MY1g==}
@@ -1331,7 +1332,7 @@ packages:
   /mlly@1.4.0:
     resolution: {integrity: sha512-ua8PAThnTwpprIaU47EPeZ/bPUVp2QYBbWMphUQpVdBI3Lgqzm5KZQ45Agm3YJedHXaIHl6pBGabaLSUPPSptg==}
     dependencies:
-      acorn: 8.10.0
+      acorn: 8.11.2
       pathe: 1.1.1
       pkg-types: 1.0.3
       ufo: 1.1.2
@@ -1429,8 +1430,8 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
-  /prettier@3.0.3:
-    resolution: {integrity: sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==}
+  /prettier@3.1.0:
+    resolution: {integrity: sha512-TQLvXjq5IAibjh8EpBIkNKxO749UEWABoiIZehEPiY4GNpVdhaFKqSTu+QrlU6D2dPAfubRmtJTi4K4YkQ5eXw==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
@@ -1502,26 +1503,26 @@ packages:
   /react-is@18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
 
-  /react-router-dom@6.17.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-qWHkkbXQX+6li0COUUPKAUkxjNNqPJuiBd27dVwQGDNsuFBdMbrS6UZ0CLYc4CsbdLYTckn4oB4tGDuPZpPhaQ==}
+  /react-router-dom@6.20.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-CbcKjEyiSVpA6UtCHOIYLUYn/UJfwzp55va4yEfpk7JBN3GPqWfHrdLkAvNCcpXr8QoihcDMuk0dzWZxtlB/mQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
     dependencies:
-      '@remix-run/router': 1.10.0
+      '@remix-run/router': 1.13.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-router: 6.17.0(react@18.2.0)
+      react-router: 6.20.0(react@18.2.0)
     dev: false
 
-  /react-router@6.17.0(react@18.2.0):
-    resolution: {integrity: sha512-YJR3OTJzi3zhqeJYADHANCGPUu9J+6fT5GLv82UWRGSxu6oJYCKVmxUcaBQuGm9udpWmPsvpme/CdHumqgsoaA==}
+  /react-router@6.20.0(react@18.2.0):
+    resolution: {integrity: sha512-pVvzsSsgUxxtuNfTHC4IxjATs10UaAtvLGVSA1tbUE4GDaOSU1Esu2xF5nWLz7KPiMuW8BJWuPFdlGYJ7/rW0w==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: '>=16.8'
     dependencies:
-      '@remix-run/router': 1.10.0
+      '@remix-run/router': 1.13.0
       react: 18.2.0
     dev: false
 
@@ -1710,7 +1711,7 @@ packages:
   /strip-literal@1.0.1:
     resolution: {integrity: sha512-QZTsipNpa2Ppr6v1AmJHESqJ3Uz247MUS0OjrnnZjFAvEoWqxuyFuXn2xLgMtRnijJShAa1HL0gtJyUs7u7n3Q==}
     dependencies:
-      acorn: 8.10.0
+      acorn: 8.11.2
 
   /subtitle@4.2.1:
     resolution: {integrity: sha512-ohV7DcQAYjoO8SDTZHaD912g6K+JktbLERlkZyuoNWSXboOOdIvuriF4fZC0T6lbVeiqLfR8mmw3CxIJ5+UTuw==}
@@ -1779,8 +1780,8 @@ packages:
     resolution: {integrity: sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==}
     engines: {node: '>=4'}
 
-  /typescript@5.2.2:
-    resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
+  /typescript@5.3.2:
+    resolution: {integrity: sha512-6l+RyNy7oAHDfxC4FzSJcz9vnjTKxrLpDG5M2Vu4SHRVNg6xzqZp6LYSR9zjqQTu8DU/f5xwxUdADOkbrIX2gQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: false
@@ -1912,7 +1913,7 @@ packages:
       '@vitest/spy': 0.33.0
       '@vitest/ui': 0.33.0(vitest@0.33.0)
       '@vitest/utils': 0.33.0
-      acorn: 8.10.0
+      acorn: 8.11.2
       acorn-walk: 8.2.0
       cac: 6.7.14
       chai: 4.3.7
