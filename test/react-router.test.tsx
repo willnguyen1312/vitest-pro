@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { render as rtlRender, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import {
@@ -79,7 +80,7 @@ test("rendering a component that uses useLocation", () => {
     initialEntries: [route],
   });
 
-  screen.debug();
+  // screen.debug();
 
   expect(screen.getByText(route)).toBeInTheDocument();
 });

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["node", "vitest/globals"],
+    "types": ["vitest/globals", "vitest-dom/extend-expect"],
     "lib": ["ES2015", "DOM"],
     "esModuleInterop": true,
     "jsx": "react-jsx",
