@@ -1,37 +1,44 @@
+import { AppProvider, Button, Text } from "@shopify/polaris";
+import enTranslations from "@shopify/polaris/locales/en.json";
 import { mount } from "@shopify/react-testing";
-import React from "react";
+import "@shopify/react-testing/matchers";
+import { useState } from "react";
 
-const ClickCounter = ({ defaultCount }) => {
-  const [count, setCount] = React.useState(0);
+// Mock window.matchMedia
+// @ts-ignore
+window.matchMedia =
+  window.matchMedia ||
+  function () {
+    return {
+      matches: false,
+      addListener: function () {},
+      removeListener: function () {},
+    };
+  };
+
+const App = () => {
+  const [counter, setCounter] = useState(0);
 
   return (
-    <div>
-      <p>count: {count || defaultCount} </p>
-      <button onClick={() => setCount(count + 1)}>click</button>
-    </div>
+    <AppProvider i18n={enTranslations}>
+      <Text as="p">{counter}</Text>
+      <Button onClick={() => setCounter(counter + 1)}>Example button</Button>
+    </AppProvider>
   );
 };
 
-describe("<ClickCounter />", () => {
-  it("allows us to set props", () => {
-    const wrapper = mount(<ClickCounter defaultCount={0} />);
+describe.only("Sample component", () => {
+  it("should render", () => {
+    const wrapper = mount(<App />);
 
-    expect(wrapper.props.defaultCount).toBe(0);
-    expect(wrapper.text()).toBe("count: 0 click");
-    wrapper.setProps({ defaultCount: 1 });
-    expect(wrapper.props.defaultCount).toBe(1);
-    expect(wrapper.text()).toBe("count: 1 click");
+    wrapper
+      .find(Button, {
+        children: "Example button",
+      })
+      .trigger("onClick");
 
-    wrapper.find("button").trigger("onClick");
-    wrapper.find("button").trigger("onClick");
-    expect(wrapper.text()).toBe("count: 2 click");
-  });
-
-  it("triggers handlers", () => {
-    const wrapper = mount(<ClickCounter defaultCount={0} />);
-    wrapper.find("button").trigger("onClick");
-    wrapper.find("button").trigger("onClick");
-    wrapper.find("button").trigger("onClick");
-    expect(wrapper.text()).toBe("count: 3 click");
+    expect(wrapper).toContainReactComponentTimes(Text, 1, {
+      children: 1,
+    });
   });
 });
