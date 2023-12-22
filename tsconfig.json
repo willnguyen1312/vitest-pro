@@ -5,6 +5,9 @@
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "resolveJsonModule": true,
-    "module": "nodenext"
+    "module": "nodenext",
+    "moduleResolution": "NodeNext",
+    "allowImportingTsExtensions": true,
+    "noEmit": true
   }
 }

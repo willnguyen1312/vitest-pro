@@ -10,5 +10,8 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     setupFiles: "./setup-tests.ts",
+    deps: {
+      inline: ["ts-jest-mock"],
+    },
   },
 });
