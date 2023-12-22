@@ -212,7 +212,7 @@ function SimpleIndexTableExample() {
   const rowMarkup = orders.map(
     (
       { id, order, date, customer, total, paymentStatus, fulfillmentStatus },
-      index
+      index,
     ) => (
       <IndexTable.Row
         id={id}
@@ -235,7 +235,7 @@ function SimpleIndexTableExample() {
         <IndexTable.Cell>{paymentStatus}</IndexTable.Cell>
         <IndexTable.Cell>{fulfillmentStatus}</IndexTable.Cell>
       </IndexTable.Row>
-    )
+    ),
   );
 
   return (

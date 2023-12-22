@@ -3,7 +3,7 @@ import { sum } from "../src/sum.ts";
 
 // Mock sum function with vitest
 
-describe.only("test-mock", () => {
+describe("mock", () => {
   it("should work", () => {
     const mockSum = vi.fn(sum);
     mockSum.mockReturnValue(3);
