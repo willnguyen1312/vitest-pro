@@ -1,41 +1,12 @@
 import { it } from "vitest";
 
 it("should pass", () => {
-  const pre = Array(3);
+  const logLastArg = (...args: any) => {
+    const [{ name = "Nam", aha = "Cool" } = {}] = args.slice(-1);
 
-  const arr = pre.map(() => {
-    console.log("map");
-  });
+    console.log(`Hello ${name}!`);
+    console.log("aha ", aha);
+  };
 
-  console.log(arr);
-
-  // expect(arr).toMatchInlineSnapshot(`
-  //   [
-  //     ,
-  //     ,
-  //     ,
-  //   ]
-  // `);
-
-  // arr[0][0] = 1;
-
-  // expect(arr).toMatchInlineSnapshot(`
-  //   [
-  //     [
-  //       1,
-  //       null,
-  //       null,
-  //     ],
-  //     [
-  //       null,
-  //       null,
-  //       null,
-  //     ],
-  //     [
-  //       null,
-  //       null,
-  //       null,
-  //     ],
-  //   ]
-  // `);
+  logLastArg({ aha: "World" });
 });
