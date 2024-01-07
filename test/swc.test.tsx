@@ -34,7 +34,7 @@ test("swc should work", async () => {
     {
       syntax: "typescript",
       tsx: true,
-    }
+    },
   );
 
   //   expect(ast).toMatchInlineSnapshot();
