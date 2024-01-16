@@ -11,7 +11,7 @@ describe("TypeScript", () => {
         ({
           id: item,
           name: "name",
-        }) satisfies DataItem
+        }) satisfies DataItem,
     );
   });
 });
