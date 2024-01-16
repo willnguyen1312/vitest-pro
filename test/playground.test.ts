@@ -1,12 +1,14 @@
-import { it } from "vitest";
+import { vi } from "vitest";
+import * as stuff from "./sample.ts";
 
 it("should pass", () => {
-  const logLastArg = (...args: any) => {
-    const [{ name = "Nam", aha = "Cool" } = {}] = args.slice(-1);
+  const input = 1;
 
-    console.log(`Hello ${name}!`);
-    console.log("aha ", aha);
-  };
+  // spy
+  vi.spyOn(stuff, "double");
 
-  logLastArg({ aha: "World" });
+  const output = stuff.double(input);
+  expect(output).toEqual(2);
+
+  expect(stuff.double).toHaveBeenCalledTimes(1);
 });
