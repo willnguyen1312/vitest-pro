@@ -49,6 +49,7 @@ const data: UserInfo = {
   callMe: () => {},
 };
 
+// Credit to https://dev.to/tipsy_dev/advanced-typescript-reinventing-lodash-get-4fhe
 export type GetFieldType<Obj, Path> =
   Path extends `${infer Left}.${infer Right}`
     ? Left extends keyof Obj
