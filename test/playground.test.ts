@@ -1,14 +1,15 @@
-import { vi } from "vitest";
-import * as stuff from "./sample.ts";
+import { it, vi, expect } from "vitest";
+
+const obj = {
+  hi: () => "Hello",
+};
 
 it("should pass", () => {
-  const input = 1;
+  const spied = vi.spyOn(obj, "hi");
 
-  // spy
-  vi.spyOn(stuff, "double");
+  const result = obj.hi();
 
-  const output = stuff.double(input);
-  expect(output).toEqual(2);
+  expect(result).toBe("Hello");
 
-  expect(stuff.double).toHaveBeenCalledTimes(1);
+  expect(spied).toHaveBeenCalledTimes(1);
 });
