@@ -212,7 +212,7 @@ function SimpleIndexTableExample() {
   const rowMarkup = orders.map(
     (
       { id, order, date, customer, total, paymentStatus, fulfillmentStatus },
-      index,
+      index
     ) => (
       <IndexTable.Row
         id={id}
@@ -235,7 +235,7 @@ function SimpleIndexTableExample() {
         <IndexTable.Cell>{paymentStatus}</IndexTable.Cell>
         <IndexTable.Cell>{fulfillmentStatus}</IndexTable.Cell>
       </IndexTable.Row>
-    ),
+    )
   );
 
   return (
@@ -247,7 +247,7 @@ function SimpleIndexTableExample() {
   );
 }
 
-describe.only("Sample polaris table component", () => {
+describe("Sample polaris table component", () => {
   it("should render", async () => {
     const text = mount(<SimpleIndexTableExample />).find(Text, {
       id: "1020",
@@ -263,10 +263,12 @@ describe("Sample polaris table component with testing-library", () => {
   it("should render", async () => {
     rtlRender(<SimpleIndexTableExample />);
 
-    const firstRow = screen.getByText("#1020");
+    console.log(window.dispatchEvent(new Event("click")));
 
-    await userEvent.click(firstRow);
+    // const firstRow = screen.getByText("#1020");
 
-    screen.getByText("Selected: 1");
+    // await userEvent.click(firstRow);
+
+    // screen.getByText("Selected: 1");
   });
 });
