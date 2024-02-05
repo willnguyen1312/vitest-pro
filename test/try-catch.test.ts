@@ -6,4 +6,6 @@ it("try-catch", () => {
   } catch {
     expect(true).toBe(true);
   }
+
+  expect.assertions(1);
 });
