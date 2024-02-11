@@ -11,5 +11,9 @@ test("mockFn", () => {
     waka,
   });
 
-  expect(fn).toBeCalledWith(expect.objectContaining({ aha, waka }));
+  expect(fn).toBeCalledWith(expect.objectContaining({ aha }));
+  expect(fn).toBeCalledWith({
+    aha,
+    waka,
+  });
 });
