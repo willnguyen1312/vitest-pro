@@ -21,7 +21,7 @@ describe("TypeScript", () => {
           obj: {
             wow: "wow",
           },
-        }) satisfies DataItem
+        }) satisfies DataItem,
     );
 
     type A = O.Path<DataItems, ["0", "obj"]>;
@@ -68,7 +68,7 @@ export function getValue<
 >(
   data: TData,
   path: TPath,
-  defaultValue?: TDefault
+  defaultValue?: TDefault,
 ): GetFieldType<TData, TPath> | TDefault {
   const value = path
     .split(".")
