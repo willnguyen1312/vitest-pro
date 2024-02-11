@@ -34,7 +34,7 @@ test("swc should work", async () => {
     {
       syntax: "typescript",
       tsx: true,
-    },
+    }
   );
 
   //   expect(ast).toMatchInlineSnapshot();
@@ -52,7 +52,7 @@ test("swc should work", async () => {
       if (node.type !== "JSXOpeningElement") {
         return;
       }
-      console.log(node);
+      // console.log(node);
     },
   });
 });

@@ -13,7 +13,7 @@ describe("Polaris test", () => {
         "node_modules/@shopify/polaris/build/ts/src/components/Box/Box.d.ts",
         // "node_modules/@shopify/polaris/build/ts/src/index.d.ts",
       ],
-      {},
+      {}
     );
 
     for (const sourceFile of program.getSourceFiles()) {
@@ -21,7 +21,7 @@ describe("Polaris test", () => {
         sourceFile.isDeclarationFile &&
         sourceFile.fileName.includes("@shopify")
       ) {
-        console.log(sourceFile.fileName);
+        // console.log(sourceFile.fileName);
       }
     }
 

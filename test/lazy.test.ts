@@ -1,7 +1,7 @@
 import { describe, it } from "vitest";
 
 function polyfillSayHi(value: string) {
-  console.log("hi " + value);
+  // console.log("hi " + value);
 }
 
 const polyfills = {
@@ -22,6 +22,6 @@ describe.only("lazy initialization", () => {
 
     delete globalThis.fetch;
 
-    console.log(typeof globalThis.fetch);
+    // console.log(typeof globalThis.fetch);
   });
 });

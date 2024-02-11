@@ -263,7 +263,7 @@ describe("Sample polaris table component with testing-library", () => {
   it("should render", async () => {
     rtlRender(<SimpleIndexTableExample />);
 
-    console.log(window.dispatchEvent(new Event("click")));
+    // console.log(window.dispatchEvent(new Event("click")));
 
     // const firstRow = screen.getByText("#1020");
 
