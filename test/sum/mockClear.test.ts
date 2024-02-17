@@ -1,14 +1,14 @@
 import { sum } from "./sum";
 import { useSum } from "./useSum";
 
-jest.mock("../src/sum");
+vi.mock("./sum");
 
 beforeEach(() => {
-  jest.clearAllMocks();
+  vi.clearAllMocks();
 });
 
 describe("sum module", () => {
-  jest.mocked(sum).mockReturnValue(5);
+  vi.mocked(sum).mockReturnValue(5);
   test("works", () => {
     sum(1, 2);
     expect(sum).toHaveBeenCalledTimes(1);
