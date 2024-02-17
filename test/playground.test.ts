@@ -45,3 +45,32 @@ describe("sample", () => {
     });
   });
 });
+
+it("work like a charm once", () => {
+  function hi() {
+    return "hi";
+  }
+  const mockEdHi = vi.fn(hi).mockImplementation(() => "ed hi");
+
+  expect(mockEdHi()).toBe("ed hi");
+
+  mockEdHi.mockRestore();
+
+  expect(mockEdHi()).toBe("hi");
+});
+
+it("work like a charm twice", () => {
+  const obj = {
+    hi() {
+      return "hi";
+    },
+  };
+
+  vi.spyOn(obj, "hi").mockReturnValue("ed hi");
+
+  expect(obj.hi()).toBe("ed hi");
+
+  vi.restoreAllMocks();
+
+  expect(obj.hi()).toBe("hi");
+});
