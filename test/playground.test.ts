@@ -8,38 +8,40 @@ describe("sample", () => {
     vi.resetAllMocks();
   });
 
-  it("should pass once", () => {
-    mockFn.mockReturnValue(10);
-    const input = 1;
-    // spy
-    const doubleSpy = vi.spyOn(stuff, "double");
+  describe("double", () => {
+    it("should pass once", () => {
+      mockFn.mockReturnValue(10);
+      const input = 1;
+      // spy
+      const doubleSpy = vi.spyOn(stuff, "double");
 
-    doubleSpy.mockReturnValue(20);
+      doubleSpy.mockReturnValue(20);
 
-    const output = stuff.double(input);
-    expect(output).toEqual(20);
+      const output = stuff.double(input);
+      expect(output).toEqual(20);
 
-    expect(doubleSpy).toHaveBeenCalledTimes(1);
+      expect(doubleSpy).toHaveBeenCalledTimes(1);
 
-    expect(mockFn()).toBe(10);
-    expect(mockFn).toHaveBeenCalledTimes(1);
-  });
+      expect(mockFn()).toBe(10);
+      expect(mockFn).toHaveBeenCalledTimes(1);
+    });
 
-  it("should pass twice", () => {
-    mockFn();
-    const input = 1;
-    // spy
-    const doubleSpy = vi.spyOn(stuff, "double");
+    it("should pass twice", () => {
+      mockFn();
+      const input = 1;
+      // spy
+      const doubleSpy = vi.spyOn(stuff, "double");
 
-    doubleSpy.mockReturnValue(20);
+      doubleSpy.mockReturnValue(20);
 
-    const output = stuff.double(input);
-    expect(output).toEqual(20);
+      const output = stuff.double(input);
+      expect(output).toEqual(20);
 
-    expect(doubleSpy).toHaveBeenCalledTimes(1);
+      expect(doubleSpy).toHaveBeenCalledTimes(1);
 
-    mockFn.mockReturnValue(10);
-    expect(mockFn).toHaveBeenCalledTimes(1);
-    expect(mockFn()).toBe(10);
+      mockFn.mockReturnValue(10);
+      expect(mockFn).toHaveBeenCalledTimes(1);
+      expect(mockFn()).toBe(10);
+    });
   });
 });
