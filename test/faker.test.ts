@@ -6,5 +6,6 @@ describe("faker", () => {
     const randomNum = faker.number.int({ min: 0, max: 2 });
 
     expect(randomNum).toBeGreaterThanOrEqual(0);
+    expect(randomNum).toBeLessThanOrEqual(2);
   });
 });
