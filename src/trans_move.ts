@@ -42,18 +42,18 @@ for (const jsonFile of jsonFilesFromSource) {
   if (isExist) {
     const destinationFile = path.join(destination, jsonFile);
     const dataFromDestination = JSON.parse(
-      fs.readFileSync(destinationFile).toString()
+      fs.readFileSync(destinationFile).toString(),
     );
     const mergedData = merge(dataFromDestination, dataFromSource);
     fs.writeFileSync(
       destinationFile,
-      `${JSON.stringify(mergedData, null, 2)}\n`
+      `${JSON.stringify(mergedData, null, 2)}\n`,
     );
   } else {
     const destinationFile = path.join(destination, jsonFile);
     fs.writeFileSync(
       destinationFile,
-      `${JSON.stringify(dataFromSource, null, 2)}\n`
+      `${JSON.stringify(dataFromSource, null, 2)}\n`,
     );
   }
 

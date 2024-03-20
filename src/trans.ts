@@ -46,7 +46,7 @@ for (const jsonFile of jsonFilesFromSource) {
 
   const destinationFile = path.join(destination, jsonFile);
   const dataFromDestination = JSON.parse(
-    fs.readFileSync(destinationFile).toString()
+    fs.readFileSync(destinationFile).toString(),
   );
   const mergedData = _.merge(dataFromDestination, dataFromSource);
   fs.writeFileSync(destinationFile, JSON.stringify(mergedData, null, 2));
