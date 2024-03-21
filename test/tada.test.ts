@@ -7,14 +7,8 @@ type Data = {
 };
 
 it("should run", () => {
-  let data: Data = {
-    errors: [
-      {
-        message: "oh no",
-      },
-    ],
-  };
-  const error = data.errors?.[0]?.message;
+  let data: Data = {};
+  const error = data.errors?.[0]?.message ?? "no error";
 
   console.log("error, ", error);
 });
