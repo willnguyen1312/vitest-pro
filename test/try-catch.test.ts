@@ -1,11 +1,10 @@
 import { it } from "vitest";
 
-it("try-catch", () => {
+it("try-catch", async () => {
   try {
-    throw new Error("test");
-  } catch {
-    expect(true).toBe(true);
+    throw Promise.resolve("test throw promise");
+  } catch (e) {
+    const result = await e;
+    expect(result).toBe("test throw promise");
   }
-
-  expect.assertions(1);
 });
