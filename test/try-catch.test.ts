@@ -10,13 +10,19 @@ it("try-catch", async () => {
 });
 
 it("try-finally", () => {
-  function run() {
+  function run(callBack) {
     try {
-      return { a: 1 };
+      return callBack();
     } finally {
       console.log("finally");
     }
   }
 
-  console.log(run());
+  console.log(
+    run(() => {
+      console.log("try");
+
+      return 1;
+    })
+  );
 });
