@@ -8,3 +8,15 @@ it("try-catch", async () => {
     expect(result).toBe("test throw promise");
   }
 });
+
+it("try-finally", () => {
+  function run() {
+    try {
+      return { a: 1 };
+    } finally {
+      console.log("finally");
+    }
+  }
+
+  console.log(run());
+});
