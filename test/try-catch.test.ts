@@ -23,6 +23,6 @@ it("try-finally", () => {
       console.log("try");
 
       return 1;
-    })
+    }),
   );
 });
