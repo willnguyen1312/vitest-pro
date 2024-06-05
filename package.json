@@ -19,8 +19,8 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitest/ui": "latest",
-    "jsdom": "^24.0.0",
-    "prettier": "^3.2.5",
+    "jsdom": "^24.1.0",
+    "prettier": "^3.3.1",
     "ts-toolbelt": "^9.6.0",
     "vite": "latest",
     "vitest": "latest"
@@ -29,13 +29,13 @@
     "startCommand": "npm run test:ui"
   },
   "dependencies": {
-    "@babel/core": "^7.24.6",
+    "@babel/core": "^7.24.7",
     "@shopify/polaris": "^13.4.0",
     "@shopify/polaris-icons": "^9.1.0",
     "@shopify/polaris-tokens": "^9.1.0",
     "@shopify/react-testing": "^5.2.0",
-    "@swc/core": "^1.5.7",
-    "@testing-library/react": "^15.0.7",
+    "@swc/core": "^1.5.25",
+    "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
     "@vue/reactivity": "^3.4.27",
     "acorn": "^8.11.3",
