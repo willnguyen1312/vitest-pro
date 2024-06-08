@@ -16,6 +16,29 @@ type Prettify<T> = {
   [K in keyof T]: T[K];
 } & {};
 
+type D = {
+  d: number;
+  f?: number;
+};
+
+type D2 = {
+  d: number;
+  e: number;
+  c: number;
+};
+
+const takeD = (params: D) => {
+  console.log(params);
+};
+
+const d2: D2 = {
+  d: 1,
+  e: 2,
+  c: 3,
+};
+
+takeD(d2);
+
 const processA = (params: Prettify<F>) => {
   if ("a" in params) {
     console.log(params.c);
