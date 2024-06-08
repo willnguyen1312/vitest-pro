@@ -54,3 +54,11 @@ processA({
   c: 1,
   b: 1,
 });
+
+const callFunc = (func: (arg: 1 | 2 | 3) => void) => {
+  func(1);
+};
+
+callFunc((arg: number) => {
+  console.log(arg);
+});
