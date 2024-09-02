@@ -32,7 +32,7 @@ describe("Vue reactive", () => {
 
     effect(() => {
       // rendering first item
-      console.log(data[0].count);
+      // console.log(data[0].count);
 
       callTimes++;
     });

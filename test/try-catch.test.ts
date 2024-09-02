@@ -14,15 +14,15 @@ it("try-finally", () => {
     try {
       return callBack();
     } finally {
-      console.log("finally");
+      // console.log("finally");
     }
   }
 
   console.log(
     run(() => {
-      console.log("try");
+      // console.log("try");
 
       return 1;
-    }),
+    })
   );
 });

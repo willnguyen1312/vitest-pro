@@ -5,5 +5,5 @@ it("should work great", () => {
 
   obj.__proto__.hi = "crazy";
 
-  console.log(obj.hi);
+  // console.log(obj.hi);
 });

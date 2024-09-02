@@ -28,7 +28,7 @@ type D2 = {
 };
 
 const takeD = (params: D) => {
-  console.log(params);
+  // console.log(params);
 };
 
 const d2: D2 = {
@@ -41,12 +41,12 @@ takeD(d2);
 
 const processA = (params: Prettify<F>) => {
   if ("a" in params) {
-    console.log(params.c);
+    // console.log(params.c);
     return;
   }
 
   if ("b" in params) {
-    console.log(params.c);
+    // console.log(params.c);
   }
 };
 
@@ -60,5 +60,5 @@ const callFunc = (func: (arg: 1 | 2 | 3) => void) => {
 };
 
 callFunc((arg: number) => {
-  console.log(arg);
+  // console.log(arg);
 });

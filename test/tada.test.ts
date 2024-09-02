@@ -28,7 +28,7 @@ commitQueue.push(
     renderCallbacks: [
       {
         call: (c: any) => {
-          console.log("c1, ");
+          // console.log("c1, ");
         },
       },
     ],
@@ -38,7 +38,7 @@ commitQueue.push(
     renderCallbacks: [
       {
         call: (c: any) => {
-          console.log("c2, ");
+          // console.log("c2, ");
         },
       },
     ],
@@ -48,16 +48,16 @@ commitQueue.push(
     renderCallbacks: [
       {
         call: (c: any) => {
-          console.log("c3, ");
+          // console.log("c3, ");
         },
       },
     ],
-  },
+  }
 );
 
 it("should run", () => {
   commitQueue.some((c) => {
-    console.log(c);
+    // console.log(c);
     try {
       // commitQueue = c.renderCallbacks;
       // c.renderCallbacks = [];
@@ -66,7 +66,7 @@ it("should run", () => {
       });
       c.renderCallbacks = [];
     } catch (e) {
-      console.log("e, ", e);
+      // console.log("e, ", e);
     }
   });
 });
