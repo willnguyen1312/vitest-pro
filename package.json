@@ -45,6 +45,7 @@
     "react-router-dom": "^6.26.1",
     "solid-js": "^1.8.22",
     "subtitle": "^4.2.1",
+    "timeago.js": "^4.0.2",
     "typescript": "^5.5.4",
     "vitest-dom": "^0.1.1",
     "woodpile": "^0.0.6"
