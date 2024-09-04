@@ -12,9 +12,9 @@ const SEC_ARRAY = [
   60, // number of seconds in 1 min
   60, // number of mins in 1 hour
   24, // number of hours in 1 day
-  7, // number of days in 1 week
-  365 / 7 / 12, // number of weeks in 1 month
-  12, // number of months in 1 year
+  // 7, // number of days in 1 week
+  // 365 / 7 / 12, // number of weeks in 1 month
+  // 12, // number of months in 1 year
 ];
 
 export function formatDiff(diff: number): string {

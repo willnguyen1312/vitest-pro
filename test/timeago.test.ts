@@ -27,6 +27,8 @@ it("should format timestamp", async () => {
   expect(formatTimeAgo("2024-09-02T19:02:19Z")).toBe("1 day ago");
   expect(formatTimeAgo("2024-09-01T19:02:19Z")).toBe("2 day ago");
 
+  expect(formatTimeAgo("2024-03-01T19:02:19Z")).toBe("186 day ago");
+
   const date = new Date();
 
   vi.useFakeTimers();
