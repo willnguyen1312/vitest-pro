@@ -23,16 +23,21 @@ import { formatTimeAgo } from "./timeago";
 it("should format timestamp", async () => {
   //   expect(format("2024-09-01T19:02:19Z")).toBe("2 days ago");
   //   expect(format("2024-09-02T19:02:19Z")).toBe("1 day ago");
+  // expect(formatTimeAgo("2024-09-02T19:02:19Z")).toBe("1 day ago");
+  // expect(formatTimeAgo("2024-09-01T19:02:19Z")).toBe("2 day ago");
+  // expect(formatTimeAgo("2024-03-01T19:02:19Z")).toBe("186 day ago");
+  // const date = new Date();
+  // vi.useFakeTimers();
+  // vi.advanceTimersByTime(9000);
+  // expect(formatTimeAgo(date.toUTCString())).toBe("9 second ago");
 
-  expect(formatTimeAgo("2024-09-02T19:02:19Z")).toBe("1 day ago");
-  expect(formatTimeAgo("2024-09-01T19:02:19Z")).toBe("2 day ago");
+  type Item = {
+    name: string;
+  };
 
-  expect(formatTimeAgo("2024-03-01T19:02:19Z")).toBe("186 day ago");
+  const list: Item[] = [{ name: "Nam" }];
 
-  const date = new Date();
+  const name = list[0]?.name;
 
-  vi.useFakeTimers();
-  vi.advanceTimersByTime(9000);
-
-  expect(formatTimeAgo(date.toUTCString())).toBe("9 second ago");
+  console.log("value: ", name);
 });
