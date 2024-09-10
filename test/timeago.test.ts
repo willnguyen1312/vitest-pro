@@ -1,4 +1,5 @@
 import { formatTimeAgo } from "./timeago";
+import { format } from "timeago.js";
 
 describe("timeago", () => {
   beforeEach(() => {
@@ -8,16 +9,19 @@ describe("timeago", () => {
   it("should format a minute correctly", async () => {
     const date = new Date();
     vi.useFakeTimers();
-    vi.advanceTimersByTime(9 * 1000);
+    vi.advanceTimersByTime(11 * 1000);
     expect(formatTimeAgo(date.toUTCString())).toBe("1 minute ago");
+
+    expect(format(date.toUTCString())).toBe("11 seconds ago");
     vi.useRealTimers();
   });
 
   it("should format more than a minute correctly", async () => {
     const date = new Date();
     vi.useFakeTimers();
-    vi.advanceTimersByTime(119 * 1000);
-    expect(formatTimeAgo(date.toUTCString())).toBe("1 minute ago");
+    vi.advanceTimersByTime(120 * 1000);
+    expect(formatTimeAgo(date.toUTCString())).toBe("2 minute ago");
+    expect(format(date.toUTCString())).toBe("2 minutes ago");
     vi.useRealTimers();
   });
 
