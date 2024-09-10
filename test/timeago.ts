@@ -4,8 +4,10 @@ export const formatTimeAgo = (input: string): string => {
 
   const diffInSeconds = (current.getTime() - toDate.getTime()) / (1000 * 60);
 
+  const isOverAWeek = diffInSeconds > 7 * 24 * 60;
+
   // format it with locale
-  return formatDiff(diffInSeconds);
+  return isOverAWeek ? null : formatDiff(diffInSeconds);
 };
 
 const SEC_ARRAY = [
@@ -22,16 +24,10 @@ export function formatDiff(diff: number): string {
     idx += 1;
   }
 
-  diff = Math.ceil(diff);
+  diff = Math.floor(diff);
 
-  if (idx === 0 && diff === SEC_ARRAY[idx]) {
-    idx++;
+  if (idx === 0 && diff === 0) {
     diff = 1;
-  } else if (idx === 1 && diff === SEC_ARRAY[idx]) {
-    idx++;
-    diff = 1;
-  } else if (idx === 2 && diff === SEC_ARRAY[idx]) {
-    return null;
   }
 
   return diff + " " + localeFunc(idx);
