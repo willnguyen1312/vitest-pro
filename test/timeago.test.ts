@@ -60,11 +60,20 @@ describe("timeago", () => {
     expect(formatTimeAgo(date.toUTCString())).toBe("1 day ago");
   });
 
+  it("should format few days correctly", async () => {
+    const date = new Date();
+    vi.useFakeTimers();
+    vi.advanceTimersByTime(47 * 60 * 1000 * 60);
+    expect(formatTimeAgo(date.toUTCString())).toBe("1 day ago");
+    expect(format(date.toUTCString())).toBe("1 day ago");
+  });
+
   it("should format up to 6 days correctly", async () => {
     const date = new Date();
     vi.useFakeTimers();
     vi.advanceTimersByTime(7 * 24 * 60 * 1000 * 60 - 1000);
     expect(formatTimeAgo(date.toUTCString())).toBe("6 day ago");
+    expect(format(date.toUTCString())).toBe("6 days ago");
   });
 
   it("should format up to 7 days correctly", async () => {
