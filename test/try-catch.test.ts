@@ -18,11 +18,7 @@ it("try-finally", () => {
     }
   }
 
-  console.log(
-    run(() => {
-      // console.log("try");
-
-      return 1;
-    })
-  );
+  run(() => {
+    return 1;
+  });
 });
