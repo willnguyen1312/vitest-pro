@@ -76,6 +76,14 @@ const formatTimeAgo = (past: string, from: string) => {
 describe("formatTimeAgo", () => {
   const rawDateStr = "2024-09-05T22:32:49.223Z";
 
+  it("works on really edge cases", () => {
+    const output = formatTimeAgo(
+      "2024-09-06T22:00:00.000Z",
+      "2024-09-07T05:00:00.000Z"
+    );
+    expect(output).toBe("7 hours ago");
+  });
+
   it("returns a full date when it is more than 6 days", () => {
     const date = new Date(rawDateStr);
     date.setDate(date.getDate() - 7);
