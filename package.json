@@ -10,7 +10,7 @@
     "test:run": "vitest run"
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.4.1",
+    "@faker-js/faker": "^9.0.0",
     "@types/acorn": "^6.0.0",
     "@types/babel__core": "^7.20.5",
     "@types/jsonwebtoken": "^9.0.6",
@@ -30,23 +30,23 @@
   },
   "dependencies": {
     "@babel/core": "^7.25.2",
-    "@swc/core": "^1.7.22",
+    "@swc/core": "^1.7.26",
     "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
-    "@vue/reactivity": "^3.4.38",
+    "@vue/reactivity": "^3.5.4",
     "acorn": "^8.12.1",
     "acorn-loose": "^8.4.0",
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^4.0.0",
     "lodash": "^4.17.21",
-    "picocolors": "^1.0.1",
+    "picocolors": "^1.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.1",
+    "react-router-dom": "^6.26.2",
     "solid-js": "^1.8.22",
     "subtitle": "^4.2.1",
     "timeago.js": "^4.0.2",
-    "typescript": "^5.5.4",
+    "typescript": "^5.6.2",
     "vitest-dom": "^0.1.1",
     "woodpile": "^0.0.6"
   }
