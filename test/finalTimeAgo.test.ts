@@ -92,8 +92,8 @@ describe("formatTimeAgo", () => {
   });
 
   it("returns relative time if it's not on the same date and less than 7 days", () => {
-    // Loop 10000 times to make sure the test is stable
-    for (let i = 0; i < 10000; i++) {
+    // Loop 100000 times to make sure the test is stable
+    for (let i = 0; i < 100000; i++) {
       const date = new Date(rawDateStr);
       const randomDays = faker.number.int({ min: 1, max: 6 });
       date.setDate(date.getDate() - randomDays);
@@ -105,8 +105,8 @@ describe("formatTimeAgo", () => {
   });
 
   it("returns relative time if it's on the same date with less than or equal to 119 seconds", () => {
-    // Loop 10000 times to make sure the test is stable
-    for (let i = 0; i < 10000; i++) {
+    // Loop 100000 times to make sure the test is stable
+    for (let i = 0; i < 100000; i++) {
       const date = new Date(rawDateStr);
       const randomSeconds = faker.number.int({ min: 0, max: 119 });
       date.setUTCSeconds(date.getUTCSeconds() - randomSeconds);
@@ -116,8 +116,8 @@ describe("formatTimeAgo", () => {
   });
 
   it("returns relative time if it's on the same date with more than 120 seconds and less than 3600 seconds", () => {
-    // Loop 10000 times to make sure the test is stable
-    for (let i = 0; i < 10000; i++) {
+    // Loop 100000 times to make sure the test is stable
+    for (let i = 0; i < 100000; i++) {
       const date = new Date(rawDateStr);
       const randomSeconds = faker.number.int({ min: 120, max: 3599 });
       date.setUTCSeconds(date.getUTCSeconds() - randomSeconds);
@@ -128,8 +128,8 @@ describe("formatTimeAgo", () => {
   });
 
   it("returns relative time if it's on the same date with more than 3600 seconds and less than 7200 seconds", () => {
-    // Loop 10000 times to make sure the test is stable
-    for (let i = 0; i < 10000; i++) {
+    // Loop 100000 times to make sure the test is stable
+    for (let i = 0; i < 100000; i++) {
       const date = new Date(rawDateStr);
       const randomSeconds = faker.number.int({ min: 3600, max: 7199 });
       date.setUTCSeconds(date.getUTCSeconds() - randomSeconds);
@@ -139,8 +139,8 @@ describe("formatTimeAgo", () => {
   });
 
   it("returns relative time if it's on the same date with more than 7200 seconds", () => {
-    // Loop 10000 times to make sure the test is stable
-    for (let i = 0; i < 10000; i++) {
+    // Loop 100000 times to make sure the test is stable
+    for (let i = 0; i < 100000; i++) {
       const date = new Date(rawDateStr);
       const randomHours = faker.number.int({ min: 2, max: 10 });
       date.setUTCHours(date.getUTCHours() - randomHours);
