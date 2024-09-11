@@ -3,7 +3,7 @@ function changeTimezone(date: Date, timeZone: string) {
   const shiftedDate = new Date(
     date.toLocaleString("en-US", {
       timeZone,
-    })
+    }),
   );
 
   // so 12:00 in Toronto is 17:00 UTC

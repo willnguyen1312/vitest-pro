@@ -52,7 +52,7 @@ commitQueue.push(
         },
       },
     ],
-  }
+  },
 );
 
 it("should run", () => {
