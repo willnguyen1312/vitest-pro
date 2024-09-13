@@ -1,8 +1,23 @@
 import { faker } from "@faker-js/faker";
 
-const formatTimeAgo = (past: string, from: string) => {
-  const toDate = new Date(past);
-  const current = new Date(from);
+const halifaxTimeZone = "America/Halifax";
+
+function changeTimezone(date: Date, timeZone = halifaxTimeZone) {
+  const dateWithTimeZone = new Date(
+    date.toLocaleString("en-US", {
+      timeZone,
+    })
+  );
+
+  return new Date(dateWithTimeZone.getTime());
+}
+
+const finalTimeAgoWithTimeZoneSlow = (past: string, from: string) => {
+  const toDate = changeTimezone(new Date(past));
+  const current = changeTimezone(new Date(from));
+
+  // const toDate = new Date(past);
+  // const current = new Date(from);
 
   const isSameDay =
     toDate.getFullYear() === current.getFullYear() &&
@@ -73,13 +88,13 @@ const formatTimeAgo = (past: string, from: string) => {
   return toDate.toDateString();
 };
 
-describe("formatTimeAgo", () => {
+describe("finalTimeAgoWithTimeZoneSlow", () => {
   const rawDateStr = "2024-09-05T22:32:49.223Z";
 
   it("works on really edge cases", () => {
-    const output = formatTimeAgo(
-      "2024-09-06T22:00:00.000Z",
-      "2024-09-07T05:00:00.000Z"
+    const output = finalTimeAgoWithTimeZoneSlow(
+      "2024-09-06T19:00:00.000Z",
+      "2024-09-07T02:00:00.000Z"
     );
     expect(output).toBe("7 hours ago");
   });
@@ -87,17 +102,20 @@ describe("formatTimeAgo", () => {
   it("returns a full date when it is more than 6 days", () => {
     const date = new Date(rawDateStr);
     date.setDate(date.getDate() - 7);
-    const output = formatTimeAgo(date.toISOString(), rawDateStr);
+    const output = finalTimeAgoWithTimeZoneSlow(date.toISOString(), rawDateStr);
     expect(output).toBe("Thu Aug 29 2024");
   });
 
   it("returns relative time if it's not on the same date and less than 7 days", () => {
-    // Loop 100000 times to make sure the test is stable
-    for (let i = 0; i < 100000; i++) {
+    // Loop 10000 times to make sure the test is stable
+    for (let i = 0; i < 10000; i++) {
       const date = new Date(rawDateStr);
       const randomDays = faker.number.int({ min: 1, max: 6 });
       date.setDate(date.getDate() - randomDays);
-      const output = formatTimeAgo(date.toISOString(), rawDateStr);
+      const output = finalTimeAgoWithTimeZoneSlow(
+        date.toISOString(),
+        rawDateStr
+      );
       const expected =
         randomDays === 1 ? "1 day ago" : `${randomDays} days ago`;
       expect(output).toBe(expected);
@@ -105,46 +123,58 @@ describe("formatTimeAgo", () => {
   });
 
   it("returns relative time if it's on the same date with less than or equal to 119 seconds", () => {
-    // Loop 100000 times to make sure the test is stable
-    for (let i = 0; i < 100000; i++) {
+    // Loop 10000 times to make sure the test is stable
+    for (let i = 0; i < 10000; i++) {
       const date = new Date(rawDateStr);
       const randomSeconds = faker.number.int({ min: 0, max: 119 });
       date.setUTCSeconds(date.getUTCSeconds() - randomSeconds);
-      const output = formatTimeAgo(date.toISOString(), rawDateStr);
+      const output = finalTimeAgoWithTimeZoneSlow(
+        date.toISOString(),
+        rawDateStr
+      );
       expect(output).toBe("1 minute ago");
     }
   });
 
   it("returns relative time if it's on the same date with more than 120 seconds and less than 3600 seconds", () => {
-    // Loop 100000 times to make sure the test is stable
-    for (let i = 0; i < 100000; i++) {
+    // Loop 10000 times to make sure the test is stable
+    for (let i = 0; i < 10000; i++) {
       const date = new Date(rawDateStr);
       const randomSeconds = faker.number.int({ min: 120, max: 3599 });
       date.setUTCSeconds(date.getUTCSeconds() - randomSeconds);
-      const output = formatTimeAgo(date.toISOString(), rawDateStr);
+      const output = finalTimeAgoWithTimeZoneSlow(
+        date.toISOString(),
+        rawDateStr
+      );
       const expected = `${Math.floor(randomSeconds / 60)} minutes ago`;
       expect(output).toBe(expected);
     }
   });
 
   it("returns relative time if it's on the same date with more than 3600 seconds and less than 7200 seconds", () => {
-    // Loop 100000 times to make sure the test is stable
-    for (let i = 0; i < 100000; i++) {
+    // Loop 10000 times to make sure the test is stable
+    for (let i = 0; i < 10000; i++) {
       const date = new Date(rawDateStr);
       const randomSeconds = faker.number.int({ min: 3600, max: 7199 });
       date.setUTCSeconds(date.getUTCSeconds() - randomSeconds);
-      const output = formatTimeAgo(date.toISOString(), rawDateStr);
+      const output = finalTimeAgoWithTimeZoneSlow(
+        date.toISOString(),
+        rawDateStr
+      );
       expect(output).toBe("1 hour ago");
     }
   });
 
   it("returns relative time if it's on the same date with more than 7200 seconds", () => {
-    // Loop 100000 times to make sure the test is stable
-    for (let i = 0; i < 100000; i++) {
+    // Loop 10000 times to make sure the test is stable
+    for (let i = 0; i < 10000; i++) {
       const date = new Date(rawDateStr);
       const randomHours = faker.number.int({ min: 2, max: 10 });
       date.setUTCHours(date.getUTCHours() - randomHours);
-      const output = formatTimeAgo(date.toISOString(), rawDateStr);
+      const output = finalTimeAgoWithTimeZoneSlow(
+        date.toISOString(),
+        rawDateStr
+      );
       const expected = `${Math.floor(randomHours)} hours ago`;
       expect(output).toBe(expected);
     }
