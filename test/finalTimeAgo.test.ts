@@ -15,7 +15,7 @@ const formatTimeAgo = (past: string, from: string) => {
     const current = new Date(from);
 
     const differenceInMinutes = Math.floor(
-      (current.getTime() - toDate.getTime()) / (1000 * 60),
+      (current.getTime() - toDate.getTime()) / (1000 * 60)
     );
 
     if (differenceInMinutes < 60) {
@@ -57,7 +57,7 @@ const formatTimeAgo = (past: string, from: string) => {
     const daysInPrevMonth = new Date(
       toDate.getFullYear(),
       toDate.getMonth(),
-      0,
+      0
     ).getDate();
     const daysToPrevMonthEnd = daysInPrevMonth - toDate.getDate();
 
@@ -79,7 +79,7 @@ describe("formatTimeAgo", () => {
   it("works on really edge cases", () => {
     const output = formatTimeAgo(
       "2024-09-06T22:00:00.000Z",
-      "2024-09-07T05:00:00.000Z",
+      "2024-09-07T05:00:00.000Z"
     );
     expect(output).toBe("7 hours ago");
   });
