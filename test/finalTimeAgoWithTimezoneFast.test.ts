@@ -33,7 +33,7 @@ const parseDate = (date: string, timeZone?: string) => {
 const finalTimeAgoWithTimezoneFast = (
   past: string,
   from = new Date().toISOString(),
-  timeZone?: string
+  timeZone?: string,
 ) => {
   const pastDate = new Date(past);
 
@@ -92,7 +92,7 @@ const finalTimeAgoWithTimezoneFast = (
     const daysInPrevMonth = new Date(
       pastDate.getFullYear(),
       pastDate.getMonth(),
-      0
+      0,
     ).getDate();
     const daysToPrevMonthEnd = daysInPrevMonth - parsedPastDate.day;
 
@@ -117,7 +117,7 @@ describe("finalTimeAgoWithTimezoneFast", () => {
     const output = finalTimeAgoWithTimezoneFast(
       "2024-09-05T22:00:00.000Z",
       "2024-09-06T05:00:00.000Z",
-      timeZone
+      timeZone,
     );
 
     expect(output).toBe("1 day ago");
@@ -126,7 +126,7 @@ describe("finalTimeAgoWithTimezoneFast", () => {
   it("works on really edge cases", () => {
     const output = finalTimeAgoWithTimezoneFast(
       "2024-09-06T22:00:00.000Z",
-      "2024-09-07T05:00:00.000Z"
+      "2024-09-07T05:00:00.000Z",
     );
     expect(output).toBe("7 hours ago");
   });
@@ -146,7 +146,7 @@ describe("finalTimeAgoWithTimezoneFast", () => {
       date.setDate(date.getDate() - randomDays);
       const output = finalTimeAgoWithTimezoneFast(
         date.toISOString(),
-        rawDateStr
+        rawDateStr,
       );
       const expected =
         randomDays === 1 ? "1 day ago" : `${randomDays} days ago`;
@@ -162,7 +162,7 @@ describe("finalTimeAgoWithTimezoneFast", () => {
       date.setUTCSeconds(date.getUTCSeconds() + randomSeconds);
       const output = finalTimeAgoWithTimezoneFast(
         rawDateStr,
-        date.toISOString()
+        date.toISOString(),
       );
       expect(output).toBe("1 minute ago");
     }
@@ -176,7 +176,7 @@ describe("finalTimeAgoWithTimezoneFast", () => {
       date.setUTCMinutes(date.getUTCMinutes() + randomMinutes);
       const output = finalTimeAgoWithTimezoneFast(
         rawDateStr,
-        date.toISOString()
+        date.toISOString(),
       );
       const expected = `${randomMinutes} minutes ago`;
       expect(output).toBe(expected);
@@ -191,7 +191,7 @@ describe("finalTimeAgoWithTimezoneFast", () => {
       date.setUTCSeconds(date.getUTCSeconds() + randomSeconds);
       const output = finalTimeAgoWithTimezoneFast(
         rawDateStr,
-        date.toISOString()
+        date.toISOString(),
       );
       expect(output).toBe("1 hour ago");
     }
@@ -205,7 +205,7 @@ describe("finalTimeAgoWithTimezoneFast", () => {
       date.setUTCHours(date.getUTCHours() + randomHours);
       const output = finalTimeAgoWithTimezoneFast(
         rawDateStr,
-        date.toISOString()
+        date.toISOString(),
       );
       const expected = `${Math.floor(randomHours)} hours ago`;
       expect(output).toBe(expected);
