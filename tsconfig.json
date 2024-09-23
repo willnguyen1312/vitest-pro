@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "types": ["vitest/globals", "vitest-dom/extend-expect"],
-    "lib": ["ES2015", "DOM"],
+    "lib": ["ESNext", "DOM"],
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "resolveJsonModule": true,
