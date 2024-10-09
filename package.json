@@ -48,6 +48,7 @@
     "timeago.js": "^4.0.2",
     "typescript": "^5.6.2",
     "vitest-dom": "^0.1.1",
-    "woodpile": "^0.0.6"
+    "woodpile": "^0.0.6",
+    "zod": "^3.23.8"
   }
 }
