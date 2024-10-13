@@ -4,7 +4,7 @@ it("works for this", () => {
   }
 
   Effect.prototype._callback = function () {
-    const cleanup = this._fn();
+    this._fn();
   };
 
   function effect(fun) {
