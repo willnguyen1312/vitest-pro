@@ -1,4 +1,4 @@
-import { sortBy } from "lodash";
+import { sortBy, minBy } from "lodash";
 
 const arr = ["/1", "/2", "/3", "/4", "/5", "/6", "/7", "/8", "/9", "/10"];
 
@@ -34,4 +34,12 @@ test("sortBy", () => {
     "/9",
     "/10",
   ]);
+});
+
+test("minBy", () => {
+  const arr: { x: undefined | number }[] = [{ x: null }, { x: null }];
+
+  const result = minBy(arr, "x");
+
+  expect(result).toBe(undefined);
 });
