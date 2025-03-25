@@ -10,17 +10,17 @@
     "test:run": "vitest run"
   },
   "devDependencies": {
-    "@faker-js/faker": "^9.2.0",
+    "@faker-js/faker": "^9.6.0",
     "@types/acorn": "^6.0.4",
     "@types/babel__core": "^7.20.5",
-    "@types/jsonwebtoken": "^9.0.7",
+    "@types/jsonwebtoken": "^9.0.9",
     "@types/jwt-decode": "^3.1.0",
-    "@types/lodash": "^4.17.13",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/lodash": "^4.17.16",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^19.0.4",
     "@vitest/ui": "latest",
-    "jsdom": "^25.0.1",
-    "prettier": "^3.3.3",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.5.3",
     "ts-toolbelt": "^9.6.0",
     "vite": "latest",
     "vitest": "latest"
@@ -29,28 +29,34 @@
     "startCommand": "npm run test:ui"
   },
   "dependencies": {
-    "@babel/core": "^7.26.0",
+    "@babel/core": "^7.26.10",
     "@preact/signals-core": "^1.8.0",
-    "@preact/signals-react": "^2.2.0",
-    "@swc/core": "^1.9.2",
-    "@testing-library/react": "^16.0.1",
-    "@testing-library/user-event": "^14.5.2",
+    "@preact/signals-react": "^3.0.1",
+    "@swc/core": "^1.11.13",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
     "@vue/reactivity": "^3.5.13",
-    "acorn": "^8.14.0",
+    "acorn": "^8.14.1",
     "acorn-loose": "^8.4.0",
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^4.0.0",
     "lodash": "^4.17.21",
     "picocolors": "^1.1.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0",
-    "solid-js": "^1.9.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.4.0",
+    "solid-js": "^1.9.5",
     "subtitle": "^4.2.1",
     "timeago.js": "^4.0.2",
-    "typescript": "^5.6.3",
+    "typescript": "^5.8.2",
     "vitest-dom": "^0.1.1",
     "woodpile": "^0.0.6",
-    "zod": "^3.23.8"
+    "zod": "^3.24.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "esbuild"
+    ]
   }
 }
