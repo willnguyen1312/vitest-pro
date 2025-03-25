@@ -2,7 +2,6 @@ import { expect, test } from "vitest";
 
 const createGraphQLClient = (options: Record<string, unknown>) => {
   const resolves: Function[] = [];
-
   return {
     query: async (query: string) => {
       const result = options[query];
@@ -25,6 +24,7 @@ test("graphql client", async () => {
   });
 
   const resultPromise = graphQLClient.query("HelloQuery");
+  // Uncomment this line to block the test
   await graphQLClient.resolveAll();
   expect(await resultPromise).toBe("Hello, world!");
 });
