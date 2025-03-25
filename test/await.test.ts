@@ -1,15 +1,30 @@
 import { expect, test } from "vitest";
 
-test("await", async () => {
-  let resolver: Function;
+const createGraphQLClient = (options: Record<string, unknown>) => {
+  const resolves: Function[] = [];
 
-  const promise = new Promise<void>((resolve) => {
-    resolver = resolve;
+  return {
+    query: async (query: string) => {
+      const result = options[query];
+      const promise = new Promise<unknown>((resolve) => {
+        resolves.push(() => resolve(result));
+      });
+      return promise;
+    },
+    resolveAll: async () => {
+      for (const resolve of resolves) {
+        resolve();
+      }
+    },
+  };
+};
+
+test("graphql client", async () => {
+  const graphQLClient = createGraphQLClient({
+    HelloQuery: "Hello, world!",
   });
 
-  // Uncomm the promise to block the test
-  resolver();
-
-  await promise;
-  console.log("done");
+  const resultPromise = graphQLClient.query("HelloQuery");
+  await graphQLClient.resolveAll();
+  expect(await resultPromise).toBe("Hello, world!");
 });
