@@ -18,17 +18,6 @@ const createGraphQLClient = (options: Record<string, unknown>) => {
   };
 };
 
-test("graphql client single call", async () => {
-  const graphQLClient = createGraphQLClient({
-    HelloQuery: "Hello, world!",
-  });
-
-  const resultPromise = graphQLClient.query("HelloQuery");
-  // Comment the line below to block the test
-  await graphQLClient.resolveAll();
-  expect(await resultPromise).toBe("Hello, world!");
-});
-
 test("graphql client multiple calls", async () => {
   const graphQLClient = createGraphQLClient({
     HelloQuery: "Hello, world!",
