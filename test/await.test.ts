@@ -1,19 +1,18 @@
 import { expect, test } from "vitest";
 
 const createGraphQLClient = (options: Record<string, unknown>) => {
-  const resolves: (() => Promise<unknown>)[] = [];
+  const resolves: Set<() => Promise<unknown>> = new Set();
   return {
     query: async (query: string) => {
       const result = options[query];
       const promise = new Promise<unknown>((resolve) => {
-        resolves.push(async () => resolve(result));
+        resolves.add(async () => resolve(result));
       });
       return promise;
     },
     resolveAll: async () => {
-      for (const resolve of resolves) {
-        await resolve();
-      }
+      await Promise.all(Array.from(resolves).map((resolve) => resolve()));
+      resolves.clear();
     },
   };
 };
