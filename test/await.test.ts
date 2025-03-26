@@ -24,7 +24,7 @@ test("graphql client single call", async () => {
   });
 
   const resultPromise = graphQLClient.query("HelloQuery");
-  // Uncomment this line to block the test
+  // Comment the line below to block the test
   await graphQLClient.resolveAll();
   expect(await resultPromise).toBe("Hello, world!");
 });
