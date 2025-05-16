@@ -1,4 +1,4 @@
-import { test } from "vitest";
+import { test, it } from "vitest";
 
 test("performance", async () => {
   performance.mark("start");
@@ -8,4 +8,8 @@ test("performance", async () => {
 
   performance.mark("end");
   console.log(performance.measure("test", "start", "end"));
+});
+
+it.each([[1, 2, 3]])(`%s`, (...test) => {
+  console.log(test);
 });
