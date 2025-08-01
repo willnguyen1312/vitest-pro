@@ -13,8 +13,8 @@ it("should pass", () => {
   //   console.log(parsedData);
 
   const updatedData = parsedData.map((item: any) => {
-    item.data.start += 50000;
-    item.data.end += 50000;
+    item.data.start -= 5000;
+    item.data.end -= 5000;
     return item;
   });
 
