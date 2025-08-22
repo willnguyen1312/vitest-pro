@@ -2,7 +2,13 @@
 // @ts-nocheck
 import React from "react";
 import Fetch from "./Fetch";
-import { render, fireEvent, cleanup, waitFor } from "@testing-library/react";
+import {
+  render,
+  fireEvent,
+  cleanup,
+  waitFor,
+  waitForElementToBeRemoved,
+} from "@testing-library/react";
 
 afterEach(cleanup);
 
@@ -31,7 +37,8 @@ test("when clicking on button displays joke if API succeeds", async () => {
 
   const { getByTestId, getByText } = render(<Fetch />);
   fireEvent.click(getByText("Get a Chuck Norris joke"));
-  expect(getByTestId("fetch-loading")).toBeVisible();
+
+  await waitForElementToBeRemoved(() => getByTestId("fetch-loading"));
   await waitFor(() => getByTestId("fetch-joke"));
 
   expect(getByTestId("fetch-joke").textContent).toBe(
