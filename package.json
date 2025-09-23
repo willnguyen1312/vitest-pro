@@ -36,6 +36,7 @@
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
     "@vue/reactivity": "^3.5.13",
+    "@wry/equality": "^0.5.0",
     "acorn": "^8.14.1",
     "acorn-loose": "^8.4.0",
     "jsonwebtoken": "^9.0.2",
