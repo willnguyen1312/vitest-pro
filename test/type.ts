@@ -62,3 +62,24 @@ const callFunc = (func: (arg: 1 | 2 | 3) => void) => {
 callFunc((arg: number) => {
   // console.log(arg);
 });
+
+type Action = { type: string; payload?: any };
+type ThunkAction<T> = (dispatch: (arg: Function) => T) => T;
+
+type DispatchArg = Action | { type: "RESET" };
+
+const dispatch = <T>(arg: DispatchArg | ThunkAction<T>) => {
+  if (typeof arg === "function") {
+    return arg(arg);
+  } else {
+    return undefined;
+  }
+};
+
+const thunkCreator = (): ThunkAction<number> => {
+  return (dispatch) => {
+    return 100;
+  };
+};
+
+const data = dispatch(thunkCreator());
