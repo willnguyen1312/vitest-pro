@@ -15,5 +15,5 @@ root.render(
     fallback={<div>Error 😅</div>}
   >
     <App />
-  </ErrorBoundary>
+  </ErrorBoundary>,
 );

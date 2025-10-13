@@ -11,7 +11,7 @@ export default function App() {
         resolve(void 0);
 
         dispatch();
-      }, 1000)
+      }, 1000),
     );
     console.log("After clicked");
   }

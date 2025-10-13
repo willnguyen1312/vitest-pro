@@ -58,7 +58,7 @@ test("loops with await", async () => {
     waitTimes.map(async (waitTime) => {
       await sleep(waitTime);
       console.log(`waited for ${waitTime}ms`);
-    })
+    }),
   );
 
   vi.runAllTimers();
