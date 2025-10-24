@@ -11,7 +11,7 @@
     "test:run": "vitest run"
   },
   "devDependencies": {
-    "@faker-js/faker": "^10.0.0",
+    "@faker-js/faker": "^10.1.0",
     "@types/acorn": "^6.0.4",
     "@types/babel__core": "^7.20.5",
     "@types/jsonwebtoken": "^9.0.10",
@@ -20,17 +20,17 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@vitest/ui": "latest",
-    "jsdom": "^27.0.0",
+    "jsdom": "^27.0.1",
     "prettier": "^3.6.2",
     "ts-toolbelt": "^9.6.0",
-    "vite": "latest",
-    "vitest": "latest"
+    "vite": "^7.1.12",
+    "vitest": "^4.0.2"
   },
   "stackblitz": {
     "startCommand": "npm run test:ui"
   },
   "dependencies": {
-    "@babel/core": "^7.28.4",
+    "@babel/core": "^7.28.5",
     "@preact/signals-core": "^1.12.1",
     "@preact/signals-react": "^3.3.1",
     "@swc/core": "^1.13.5",
