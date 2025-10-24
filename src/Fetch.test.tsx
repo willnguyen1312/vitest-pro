@@ -32,7 +32,7 @@ test.skip("when clicking on button displays joke if API succeeds", async () => {
         Promise.resolve({
           value: "Chuck Norris counted to infinity. Twice.",
         }),
-    })
+    }),
   );
 
   const { getByTestId, getByText } = render(<Fetch />);
@@ -42,11 +42,11 @@ test.skip("when clicking on button displays joke if API succeeds", async () => {
   await waitFor(() => getByTestId("fetch-joke"));
 
   expect(getByTestId("fetch-joke").textContent).toBe(
-    "Chuck Norris counted to infinity. Twice."
+    "Chuck Norris counted to infinity. Twice.",
   );
   expect(global.fetch).toHaveBeenCalledTimes(1);
   expect(global.fetch.mock.calls[0][0]).toBe(
-    "https://api.chucknorris.io/jokes/random"
+    "https://api.chucknorris.io/jokes/random",
   );
 
   // Clear mock
@@ -58,7 +58,7 @@ test.skip("when clicking on button displays error if API fails", async () => {
   vi.spyOn(global, "fetch").mockImplementation(() =>
     Promise.resolve({
       status: 500,
-    })
+    }),
   );
 
   const { getByTestId, getByText } = render(<Fetch />);
@@ -68,7 +68,7 @@ test.skip("when clicking on button displays error if API fails", async () => {
   expect(getByTestId("fetch-error").textContent).toBe("Failed to fetch");
   expect(global.fetch).toHaveBeenCalledTimes(1);
   expect(global.fetch.mock.calls[0][0]).toBe(
-    "https://api.chucknorris.io/jokes/random"
+    "https://api.chucknorris.io/jokes/random",
   );
 
   // Clear mock
