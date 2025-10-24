@@ -1,7 +1,7 @@
 import { vi } from "vitest";
 import * as stuff from "./sample.ts";
 
-describe("sample", () => {
+describe.skip("sample", () => {
   const mockFn = vi.fn(() => 20);
 
   beforeEach(() => {

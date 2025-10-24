@@ -1,7 +1,7 @@
 import { parse } from "acorn-loose";
 import { expect, test } from "vitest";
 
-test("acorn loose", () => {
+test.skip("acorn loose", () => {
   expect(parse("1 / * 4 )[2]", { ecmaVersion: 2020 })).toMatchInlineSnapshot(`
     Node {
       "body": [

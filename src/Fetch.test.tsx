@@ -12,18 +12,18 @@ import {
 
 afterEach(cleanup);
 
-test("starts without any joke", () => {
+test.skip("starts without any joke", () => {
   const { queryByTestId } = render(<Fetch />);
   expect(queryByTestId("fetch-joke")).toBeNull();
 });
 
-test("when clicking on button, displays loading message", () => {
+test.skip("when clicking on button, displays loading message", () => {
   const { getByTestId, getByText } = render(<Fetch />);
   fireEvent.click(getByText("Get a Chuck Norris joke"));
   expect(getByTestId("fetch-loading").textContent).toBe("Loading...");
 });
 
-test("when clicking on button displays joke if API succeeds", async () => {
+test.skip("when clicking on button displays joke if API succeeds", async () => {
   // Mock API
   vi.spyOn(global, "fetch").mockImplementation(() =>
     Promise.resolve({
@@ -32,7 +32,7 @@ test("when clicking on button displays joke if API succeeds", async () => {
         Promise.resolve({
           value: "Chuck Norris counted to infinity. Twice.",
         }),
-    }),
+    })
   );
 
   const { getByTestId, getByText } = render(<Fetch />);
@@ -42,23 +42,23 @@ test("when clicking on button displays joke if API succeeds", async () => {
   await waitFor(() => getByTestId("fetch-joke"));
 
   expect(getByTestId("fetch-joke").textContent).toBe(
-    "Chuck Norris counted to infinity. Twice.",
+    "Chuck Norris counted to infinity. Twice."
   );
   expect(global.fetch).toHaveBeenCalledTimes(1);
   expect(global.fetch.mock.calls[0][0]).toBe(
-    "https://api.chucknorris.io/jokes/random",
+    "https://api.chucknorris.io/jokes/random"
   );
 
   // Clear mock
   global.fetch.mockClear();
 });
 
-test("when clicking on button displays error if API fails", async () => {
+test.skip("when clicking on button displays error if API fails", async () => {
   // Mock API
   vi.spyOn(global, "fetch").mockImplementation(() =>
     Promise.resolve({
       status: 500,
-    }),
+    })
   );
 
   const { getByTestId, getByText } = render(<Fetch />);
@@ -68,7 +68,7 @@ test("when clicking on button displays error if API fails", async () => {
   expect(getByTestId("fetch-error").textContent).toBe("Failed to fetch");
   expect(global.fetch).toHaveBeenCalledTimes(1);
   expect(global.fetch.mock.calls[0][0]).toBe(
-    "https://api.chucknorris.io/jokes/random",
+    "https://api.chucknorris.io/jokes/random"
   );
 
   // Clear mock

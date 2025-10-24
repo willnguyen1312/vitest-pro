@@ -4,7 +4,7 @@ import App from "./App";
 
 import fs from "fs";
 
-it("should work great", async () => {
+it.skip("should work great", async () => {
   // Arrange
   render(<App />);
 

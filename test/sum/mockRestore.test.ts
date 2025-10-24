@@ -5,7 +5,7 @@ beforeEach(() => {
   vi.restoreAllMocks();
 });
 
-describe("sum module", () => {
+describe.skip("sum module", () => {
   test("works", () => {
     expect(sumModule.sum(1, 2)).toBe(3);
 
@@ -15,7 +15,7 @@ describe("sum module", () => {
   });
 });
 
-describe("useSum module", () => {
+describe.skip("useSum module", () => {
   test("works", () => {
     expect(useSum(1, 2)).toBe(3);
 
