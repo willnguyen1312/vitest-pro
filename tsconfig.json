@@ -9,7 +9,6 @@
     "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
     "noEmit": true,
-    "target": "ES2015",
-    "jsxImportSource": "solid-js"
+    "target": "ES2015"
   }
 }
