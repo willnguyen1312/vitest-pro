@@ -10,7 +10,7 @@ test("late promise", async () => {
 
   setTimeout(() => {
     resolve("done");
-  }, 3000);
+  }, 10000);
 
   vi.runAllTimers();
 
