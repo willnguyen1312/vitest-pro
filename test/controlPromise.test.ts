@@ -3,17 +3,17 @@ import { vi } from "vitest";
 
 test("late promise", async () => {
   vi.useFakeTimers();
-  let resolve: (value: unknown) => void;
-  const promise = new Promise((res) => {
-    resolve = res;
-  });
+  let done = false;
+  const { promise, resolve } = Promise.withResolvers();
+  //   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/withResolvers
 
   setTimeout(() => {
     resolve("done");
+    done = true;
   }, 10000);
 
   vi.runAllTimers();
 
   await promise;
-  console.log("Promise resolved");
+  expect(done).toBe(true);
 });
