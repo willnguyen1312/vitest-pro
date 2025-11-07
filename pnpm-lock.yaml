@@ -77,6 +77,9 @@ importers:
       woodpile:
         specifier: ^0.0.6
         version: 0.0.6
+      zen-observable:
+        specifier: ^0.10.0
+        version: 0.10.0
       zod:
         specifier: ^4.1.12
         version: 4.1.12
@@ -105,6 +108,9 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.2
         version: 19.2.2(@types/react@19.2.2)
+      '@types/zen-observable':
+        specifier: ^0.8.7
+        version: 0.8.7
       '@vitest/browser-playwright':
         specifier: ^4.0.2
         version: 4.0.2(playwright@1.56.1)(vite@7.1.12)(vitest@4.0.2)
@@ -749,6 +755,9 @@ packages:
 
   '@types/react@19.2.2':
     resolution: {integrity: sha512-6mDvHUFSjyT2B2yeNx2nUgMxh9LtOWvkhIU3uePn2I2oyNymUAX1NIsdgviM4CH+JSrp2D2hsMvJOkxY+0wNRA==}
+
+  '@types/zen-observable@0.8.7':
+    resolution: {integrity: sha512-LKzNTjj+2j09wAo/vvVjzgw5qckJJzhdGgWHW7j69QIGdq/KnZrMAMIHQiWGl3Ccflh5/CudBAntTPYdprPltA==}
 
   '@vitest/browser-playwright@4.0.2':
     resolution: {integrity: sha512-sEtZ4o2lsWx8lmRHP8oe1wplhY5J2fKr2YTA83NAJlXVdFlul/utxyPeCUVpADaggNMz3GnAz2Y/BkG0f86KmQ==}
@@ -1578,6 +1587,9 @@ packages:
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
+  zen-observable@0.10.0:
+    resolution: {integrity: sha512-iI3lT0iojZhKwT5DaFy2Ce42n3yFcLdFyOh01G7H0flMY60P8MJuVFEoJoNwXlmAyQ45GrjL6AcZmmlv8A5rbw==}
+
   zod@4.1.12:
     resolution: {integrity: sha512-JInaHOamG8pt5+Ey8kGmdcAcg3OL9reK8ltczgHTAwNhMys/6ThXHityHxVV2p3fkw/c+MAvBHFVYHFZDmjMCQ==}
 
@@ -2093,6 +2105,8 @@ snapshots:
   '@types/react@19.2.2':
     dependencies:
       csstype: 3.1.3
+
+  '@types/zen-observable@0.8.7': {}
 
   '@vitest/browser-playwright@4.0.2(playwright@1.56.1)(vite@7.1.12)(vitest@4.0.2)':
     dependencies:
@@ -2886,5 +2900,7 @@ snapshots:
   xmlchars@2.2.0: {}
 
   yallist@3.1.1: {}
+
+  zen-observable@0.10.0: {}
 
   zod@4.1.12: {}
