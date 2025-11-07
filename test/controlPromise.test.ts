@@ -8,6 +8,7 @@ test("late promise", async () => {
   //   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/withResolvers
 
   setTimeout(() => {
+    // Whatever processing
     resolve("done");
     done = true;
   }, 10000);
