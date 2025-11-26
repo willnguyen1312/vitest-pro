@@ -28,11 +28,6 @@ test("ky", async () => {
     await ky.get(invalid404Url);
   } catch (error) {
     expect(error.response.status).toBe(404);
-
-    // const isAxiosError = axios.isAxiosError(error);
-    // if (isAxiosError) {
-    //   expect(error.status).toBe(404);
-    // }
   }
   expect.assertions(1);
 });
