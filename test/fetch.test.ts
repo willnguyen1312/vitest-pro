@@ -19,7 +19,6 @@ test("axios", async () => {
       expect(error.status).toBe(404);
     }
   }
-
   expect.assertions(1);
 });
 
