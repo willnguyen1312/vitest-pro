@@ -26,7 +26,7 @@ test("parallel", async () => {
     valuesTobePromisified.map(async (p) => {
       const value = await makePromise(p);
       console.log(value);
-    })
+    }),
   );
 
   console.timeEnd("parallel");
