@@ -1,5 +1,4 @@
 import PQueue from "p-queue";
-import got from "got";
 import { test } from "vitest";
 
 const queue = new PQueue({ concurrency: 2 });
