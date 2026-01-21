@@ -4,11 +4,11 @@ export default function App() {
   const [state, dispatch] = useReducer((a: number) => a + 1, 0);
 
   useEffect(() => {
-    debugger;
+    // debugger;
     console.log("useEffect");
   }, []);
   
-  throw new Error("test");
+  // throw new Error("test");
   async function onClick() {
     console.log("Before clicked");
     // Wait 2 seconds
