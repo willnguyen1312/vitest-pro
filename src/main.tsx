@@ -12,7 +12,7 @@ root.render(
     onError={(...args) => {
       console.log(args);
     }}
-    fallback={<div>Error 😅</div>}
+    FallbackComponent={({ error }) => <div>Error 😅: {error.message}</div>}
   >
     <App />
   </ErrorBoundary>,

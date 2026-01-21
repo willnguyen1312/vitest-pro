@@ -1,8 +1,14 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 
 export default function App() {
   const [state, dispatch] = useReducer((a: number) => a + 1, 0);
 
+  useEffect(() => {
+    debugger;
+    console.log("useEffect");
+  }, []);
+  
+  throw new Error("test");
   async function onClick() {
     console.log("Before clicked");
     // Wait 2 seconds
@@ -15,6 +21,7 @@ export default function App() {
     );
     console.log("After clicked");
   }
+
   return (
     <div>
       <h1>Hello World</h1>
