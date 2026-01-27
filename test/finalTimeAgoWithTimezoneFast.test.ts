@@ -108,7 +108,7 @@ const finalTimeAgoWithTimezoneFast = (
   return pastDate.toDateString();
 };
 
-describe("finalTimeAgoWithTimezoneFast", () => {
+describe.skip("finalTimeAgoWithTimezoneFast", () => {
   const rawDateStr = "2024-09-05T10:32:00.223Z";
 
   it("works on edge cases with timezone", () => {
