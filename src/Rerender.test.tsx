@@ -16,11 +16,15 @@ const App = () => {
     callBack();
   }, [callBack]);
 
-  return <main>
-    <h1>Hello World</h1>
-    <p>Data: {data.join(", ")}</p>
-    <button onClick={() => setState(state.concat([state.length]))}>Add</button>
-  </main>
+  return (
+    <main>
+      <h1>Hello World</h1>
+      <p>Data: {data.join(", ")}</p>
+      <button onClick={() => setState(state.concat([state.length]))}>
+        Add
+      </button>
+    </main>
+  );
 };
 
 it("should work great", async () => {
@@ -28,11 +32,9 @@ it("should work great", async () => {
 
   const { rerender } = render(<App />);
 
-
   const button = screen.getByRole("button");
   await user.click(button);
 
   rerender(<App />);
   // expect(screen.getByText("Data: 0")).toBeInTheDocument();
-
 });

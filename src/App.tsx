@@ -7,7 +7,7 @@ export default function App() {
     // debugger;
     console.log("useEffect");
   }, []);
-  
+
   // throw new Error("test");
   async function onClick() {
     console.log("Before clicked");
