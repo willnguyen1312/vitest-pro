@@ -55,6 +55,8 @@
     "react-dom": "^19.2.1",
     "react-error-boundary": "^6.0.0",
     "react-router-dom": "^7.10.1",
+    "seroval": "^1.5.0",
+    "seroval-plugins": "^1.5.0",
     "subtitle": "^4.2.2",
     "timeago.js": "^4.0.2",
     "typescript": "^5.9.3",
