@@ -1,11 +1,12 @@
 import { describe, it } from "vitest";
-import { createReference, serialize, js, fromJSON, toJSON, deserialize } from "seroval";
+import { createReference, serialize, fromJSON, toJSON, deserialize } from "seroval";
 
+const value = "Hello";
 describe("seroval", () => {
     it("should serialize the object", async () => {
         // console.log(serialize({ greet: () => "Hello" }));
         // Register the function with a unique ID
-        const greet = createReference("greet", () => "Hello");
+        const greet = createReference("greet", () => value);
 
         // Now you can serialize it
         const result = serialize(greet);
