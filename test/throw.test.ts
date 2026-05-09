@@ -12,7 +12,7 @@ describe.only("throw", () => {
   it("should work", async () => {
     expect(() => syncThrow()).toThrow("sync error");
     expect(await asyncThrow().catch((e) => e.message)).toBe("async error");
-    expect(asyncThrow()).rejects.toThrow("async error");
-    expect(asyncThrow()).rejects.toThrowError(new Error("async error"));
+    await expect(asyncThrow()).rejects.toThrow("async error");
+    await expect(asyncThrow()).rejects.toThrowError(new Error("async error"));
   });
 });
