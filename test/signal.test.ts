@@ -1,22 +1,30 @@
 import { signal, batch, computed, effect } from "@preact/signals-core";
+import { reactive } from "@vue/reactivity";
 
 describe("signal", () => {
   it("should work as expected", () => {
-    const consoleSpied = vi.spyOn(console, "log").mockImplementation(() => {});
-    const countSignal = signal(0);
+    const users = signal({
+      firstName: signal("John"),
+      lastName: signal("Doe"),
+    });
+
+    const nestedUsers = signal({
+      firstName: signal("John"),
+      lastName: signal("Doe"),
+    });
 
     effect(() => {
-      console.log("effect", countSignal.value);
+      console.log(`Rendering first name: ${users.value.firstName.value}`);
     });
 
-    batch(() => {
-      countSignal.value += 1;
-      countSignal.value += 1;
-      countSignal.value += 1;
-      countSignal.value += 1;
+    effect(() => {
+      console.log(`Rendering last name: ${users.value.lastName.value}`);
     });
 
-    expect(countSignal.value).toBe(4);
-    expect(consoleSpied).toHaveBeenCalledTimes(2);
+    users.value.lastName. = "New Family name";
+    // users.value = {
+    //   ...users.value,
+    //   lastName: "New Family name",
+    // };
   });
 });
