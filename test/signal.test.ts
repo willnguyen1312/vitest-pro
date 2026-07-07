@@ -21,7 +21,6 @@ describe("signal", () => {
       console.log(`Rendering last name: ${users.value.lastName.value}`);
     });
 
-    users.value.lastName. = "New Family name";
     // users.value = {
     //   ...users.value,
     //   lastName: "New Family name",
