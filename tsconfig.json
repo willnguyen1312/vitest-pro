@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "strict": false,
     "types": ["vitest/globals", "vitest-dom/extend-expect"],
     "lib": ["ESNext", "DOM"],
     "esModuleInterop": true,
